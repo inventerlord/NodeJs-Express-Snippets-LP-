@@ -1,0 +1,35 @@
+{
+  "expess_http_server": {
+    "prefix": "exphs",
+    "description": "Express Http Server",
+    "body": [
+      "const http = require('http');",
+      "const express = require('express');",
+      "const app = express();",
+      "const server = http.createServer(app);",
+      "",
+      "const PORT = process.env.PORT || ${1:8000};",
+      "$2",
+      "server.listen(PORT,()=>{",
+      "\tconsole.log(`Server Running on http://localhost:\\${PORT}`);",
+      "});"
+    ]
+  },
+  "expess_crud_router": {
+    "prefix": "expcrudr",
+    "description": "Express CRUD Routes Structure",
+    "body": [
+      "const { Router } = require('express');",
+      "",
+      "const ${1:routerName} = new Router();",
+      "",
+      "// Add routes",
+      "// ${1:routerName}.get('/', SessionController.store);",
+      "// ${1:routerName}.post('/', SessionController.store);",
+      "// ${1:routerName}.put('/', SessionController.store);",
+      "// ${1:routerName}.delete('/', SessionController.store);",
+      "$2",
+      "module.exports = ${1:routerName};"
+    ]
+  }
+}

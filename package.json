@@ -1,0 +1,39 @@
+{
+  "name": "nodejs-express-snippets",
+  "displayName": "NodeJs Express Snippets (LP)",
+  "description": "Only Snippets You will Ever Need For NodeJs and Express",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "publisher": "lordprogrammer",
+  "author": {
+    "name": "Lord Programmer"
+  },
+  "license": "GPLv3",
+  "homepage": "https://github.com/inventerlord/NodeJs-Express-Snippets-LP-",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inventerlord/NodeJs-Express-Snippets-LP-"
+  },
+  "bugs": {
+    "url": "https://github.com/inventerlord/NodeJs-Express-Snippets-LP-/issues"
+  },
+  "icon": "./images/logo.png",
+  "keywords": [
+    "Express",
+    "MERN",
+    "NodeJs"
+  ],
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
