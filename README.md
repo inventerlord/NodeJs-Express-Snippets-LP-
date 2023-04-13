@@ -8,9 +8,11 @@ I Love To code But Every time to make a project i had to write the some Structur
 
 ### Features
 
-Autocomplete for:
+Autocomplete Codes and Functions:
 
 | Trigger  | Function                                |
 | -------- | --------------------------------------- |
 | exphs    | Creates a Express Http Server           |
 | expcrudr | Creates a Express CRUD Routes Structure |
+
+# Release Notes
