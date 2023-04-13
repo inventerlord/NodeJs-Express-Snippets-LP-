@@ -4,7 +4,7 @@
 
 # Why This Snippets
 
-    I Love To code and Make Something . But Every time to make a project i had to write the some Structure Over and Over again Just to run a simple express . so i created this Snippets And I will Update these Snippets as i needed Or I Any of had a suggestion for a snippets (related to express or nodejs) i will ad them as well. Thanks
+    I Love To code But Every time to make a project i had to write the some Structure Over and Over again Just to run a simple express . so i created this Snippets And I will Update these Snippets as i needed Or I Any of had a suggestion for a snippets (related to express or nodejs) i will ad them as well. Thanks
 
 ### Features
 
