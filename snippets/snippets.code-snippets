@@ -7,6 +7,24 @@
       "const express = require('express');",
       "const app = express();",
       "const server = http.createServer(app);",
+      "require('dotenv').config();",
+      "",
+      "const PORT = process.env.PORT || ${1:8000};",
+      "$2",
+      "server.listen(PORT,()=>{",
+      "\tconsole.log(`Server Running on http://localhost:\\${PORT}`);",
+      "});"
+    ]
+  },
+  "expess_http_module_server": {
+    "prefix": "exphms",
+    "description": "Creates a Express Http Module Style Server",
+    "body": [
+      "import { createServer } from 'http';",
+      "import express from 'express';",
+      "const app = express();",
+      "const server = http.createServer(app);",
+      "require('dotenv').config();",
       "",
       "const PORT = process.env.PORT || ${1:8000};",
       "$2",
@@ -31,5 +49,86 @@
       "$2",
       "module.exports = ${1:routerName};"
     ]
+  },
+  "expess_mongoose_http_server": {
+    "prefix": "expmhs",
+    "description": "Express Mongooose Http Server",
+    "body": [
+      "const http = require('http');",
+      "const express = require('express');",
+      "const clientRouter = require('./routes/client');",
+      "const app = express();",
+      "const server = http.createServer(app);",
+      "require('dotenv').config();",
+      "const connectDB = require('./modules/db');",
+      "",
+      "const PORT = process.env.PORT || ${1:8000};",
+      "",
+      "app.use(clientRouter);",
+      "",
+      "(async () => {",
+      "\tawait connectDB(process.env.MONGO_URI, process.env.MONGO_DB)",
+      "\t\t.then(() => {",
+      "\t\t\tconsole.log('Successfully connected to MongoDB');",
+      "\t\t\tserver.listen(PORT, () => {",
+      "\t\t\t\tconsole.log(`Server Running on http://localhost:\\${PORT}`);",
+      "\t\t\t});",
+      "\t\t})",
+      "\t\t.catch((err) => {",
+      "\t\t\tconsole.log(err);",
+      "\t\t});",
+      "})();"
+    ]
+  },
+  "expess_mongoose_http_module_server": {
+    "prefix": "expmhms",
+    "description": "Express Mongoose Http modeule Style Server",
+    "body": [
+      "import { createServer } from 'http';",
+      "import express from 'express';",
+      "import mongoose from 'mongoose';",
+      "const app = express();",
+      "const server = http.createServer(app);",
+      "require('dotenv').config();",
+      "const connectDB = require('./modules/db');",
+      "",
+      "const PORT = process.env.PORT || ${1:8000};",
+      "const mongoURI = 'mongodb://127.0.0.1:\\${2:27017}/\\${3:database_name}' ;",
+      "const mongoDbOptions = {useNewUrlParser: true, useUnifiedTopology: true,serverSelectionTimeoutMS: 2000,}",
+      "",
+      "// Use plugins Start",
+      "app.use(express.json());",
+      "// Use plugins End",
+      "",
+      "app.use(clientRouter);",
+      "",
+      "mongoose.connect(mongoURI,mongoDbOptions)",
+      "\t.then(() => {",
+      "\t\tconsole.log('MongoDb Connected');",
+      "\t\tserver.listen(PORT, () => {",
+      "\t\t\tconsole.log(`Server Running on http://localhost:\\${PORT}`);",
+      "\t\t});",
+      "\t\t})",
+      "\t})",
+      "\t.catch((error) => {",
+      "\t\tconsole.error(error);",
+      "\t});"
+    ]
+  },
+  "mongoose_model_moduleType_style": {
+    "prefix": "mmmts",
+    "description": "Mongoose Model for NodeJs module type style",
+    "body": [
+      "import { Schema, model } from 'mongoose';",
+      "",
+      "const ${1:Model}Schema = new Schema({",
+      "\t\tname: {type: String,required: true,},",
+      "${2}",
+      "},{timestamps: true});",
+      "",
+      "export default User = model('${1:Model}', ${1:Model}Schema);"
+    ]
   }
+
+  // mongoose
 }

@@ -2,7 +2,7 @@
   "name": "nodejs-express-snippets",
   "displayName": "NodeJs Express Snippets (LP)",
   "description": "Only Snippets You will Ever Need For NodeJs and Express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.77.0"
   },
