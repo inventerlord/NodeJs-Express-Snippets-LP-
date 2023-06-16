@@ -88,7 +88,7 @@
       "import express from 'express';",
       "import mongoose from 'mongoose';",
       "const app = express();",
-      "const server = http.createServer(app);",
+      "const server = createServer(app);",
       "require('dotenv').config();",
       "const connectDB = require('./modules/db');",
       "",
@@ -109,7 +109,6 @@
       "\t\t\tconsole.log(`Server Running on http://localhost:\\${PORT}`);",
       "\t\t});",
       "\t\t})",
-      "\t})",
       "\t.catch((error) => {",
       "\t\tconsole.error(error);",
       "\t});"
